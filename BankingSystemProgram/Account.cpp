@@ -16,8 +16,9 @@ void Account::Deposit(double amount)
 
 double Account::Withdraw(double amount)
 {
-	if (this->currentBalance > 0.0)
+	if (this->currentBalance >= amount)
 	{
+
 		currentBalance -= amount;
 		return amount;
 	}

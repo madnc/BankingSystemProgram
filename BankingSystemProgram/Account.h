@@ -7,12 +7,12 @@ class Account
 public:
 	//create an account using this constructor
 	Account(int id, string firstName, string lastName, double initialBalance);
-	void Deposit(double amount);
-	double Withdraw(double amount);
+	virtual void Deposit(double amount) = 0;
+	virtual double Withdraw(double amount) = 0;
 	double closeAccount();
 
 
-private:
+protected:
 	int id;
 	string firstName;
 	string lastName;
